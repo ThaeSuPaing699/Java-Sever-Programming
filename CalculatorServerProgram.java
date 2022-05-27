@@ -7,6 +7,7 @@ public class CalculatorServerProgram {
 		ServerSocket serverSocket = new ServerSocket(6666);
 		System.out.println("Server is created");
 		Socket connectionSocket = serverSocket.accept();
+		System.out.println("Server is client is connected");
 		
 		while(true) {
 		DataInputStream in = new DataInputStream(connectionSocket.getInputStream());
