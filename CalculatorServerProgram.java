@@ -17,16 +17,16 @@ public class CalculatorServerProgram {
 		int no1 = in.readInt();
 		int no2= in.readInt();
 		
-		if(operator.equalsIgnoreCase("+")) {
+		if(operator.equals("+")) {
 			result = no1+no2;
 		}
-		else if(operator.equalsIgnoreCase("-")) {
+		else if(operator.equals("-")) {
 			result = no1-no2;
 		}
-		else if(operator.equalsIgnoreCase("*")) {
+		else if(operator.equals("*")) {
 			result = no1*no2;
 		}
-		else if(operator.equalsIgnoreCase("/")) {
+		else if(operator.equals("/")) {
 			result = no1/no2;
 		}
 		out.writeInt(result);
