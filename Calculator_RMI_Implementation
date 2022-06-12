@@ -1,0 +1,10 @@
+import java.rmi.*;
+import java.rmi.server.*;
+public class PracticeImplementation extends UnicastRemoteObject implements PracticeInterface{
+	public PracticeImplementation() throws RemoteException{super();}
+	public int add(int x, int y) throws RemoteException{return x+y;}
+	public int sub(int x, int y) throws RemoteException{return x-y;}
+	public int multi(int x, int y) throws RemoteException{return x*y;}
+	public int div(int x, int y) throws RemoteException{return x/y;}
+	}
+	
