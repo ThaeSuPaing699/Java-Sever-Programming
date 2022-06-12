@@ -1,0 +1,9 @@
+import java.net.*;
+import java.rmi.*;
+public class PracticeServer{
+	public static void main(String[] args)throws RemoteException, MalformedURLException {
+		PracticeImplementation robj = new PracticeImplementation();
+		Naming.rebind("calculator", robj);
+		System.out.println("Server is ready");
+	}
+}
