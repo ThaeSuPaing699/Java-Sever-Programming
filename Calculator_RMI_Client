@@ -1,0 +1,37 @@
+import java.net.*;
+import java.rmi.*;
+import java.util.*;
+public class PracticeClient{
+	public static void main(String[] args) throws RemoteException, MalformedURLException, NotBoundException{
+		int result=0;
+		PracticeInterface obj = (PracticeInterface) Naming.lookup("calculator");
+		
+		
+		do {
+			Scanner sc = new Scanner(System.in);
+		System.out.print("Enter an operator: ");
+		String operator = sc.nextLine();
+		
+		System.out.print("Enter no1 : ");
+		int no1 = sc.nextInt();
+		System.out.print("Enter no2 : ");
+		int no2 = sc.nextInt();
+		
+		if(operator.equals("+")) {
+			 result = obj.add(no1, no2);
+		}
+		if(operator.equals("-")) {
+			 result = obj.sub(no1, no2);
+		}
+		if(operator.equals("*")) {
+			 result = obj.multi(no1, no2);
+		}
+		if(operator.equals("/")) {
+			 result = obj.div(no1, no2);
+		}
+		
+		
+		System.out.println("The result is "+result);
+		}while(true);
+	}
+}
